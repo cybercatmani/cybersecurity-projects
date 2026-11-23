@@ -1,0 +1,9 @@
+<!-- Merge this group into /var/ossec/etc/rules/local_rules.xml. -->
+<group name="local,soc_sentinel,windows,sysmon,">
+  <rule id="100100" level="5">
+    <field name="win.eventdata.commandLine" type="pcre2">SOC_SENTINEL_SIMULATION</field>
+    <description>SOC Sentinel safe simulation marker detected on $(win.system.computer).</description>
+    <mitre><id>T1059</id></mitre>
+    <group>soc_sentinel,lab_test,</group>
+  </rule>
+</group>

@@ -1,0 +1,3 @@
+# Harmless local lab marker: alert on a URI used only in this lab.
+# Add this rule file to Suricata and test against a local HTTP server you control.
+alert http any any -> any any (msg:"SOC Sentinel local HTTP demo URI"; flow:established,to_server; http.uri; content:"/soc-sentinel-demo"; sid:1000001; rev:1;)
