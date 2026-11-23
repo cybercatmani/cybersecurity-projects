@@ -1,0 +1,20 @@
+title: Multiple Failed Authentication Events - Lab
+id: 6a60e5a2-4f32-4df0-8b7a-1a2b3c4d5e6f
+status: experimental
+description: Starter Sigma-style logic for repeated failed authentication events.
+author: SOC Sentinel Learning Lab
+date: 2026/11/23
+logsource:
+  category: authentication
+  product: windows
+detection:
+  selection:
+    EventID: 4625
+  condition: selection
+falsepositives:
+  - Mistyped passwords
+  - Service accounts with stale credentials
+level: medium
+tags:
+  - attack.credential-access
+  - attack.t1110

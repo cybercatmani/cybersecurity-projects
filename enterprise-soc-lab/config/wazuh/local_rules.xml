@@ -1,0 +1,19 @@
+<!-- Starter rules: validate IDs and syntax against your Wazuh deployment before use. -->
+<group name="local,enterprise_soc_lab,">
+  <rule id="100200" level="5">
+    <decoded_as>json</decoded_as>
+    <field name="event.category">authentication</field>
+    <description>Enterprise SOC Lab: authentication event observed</description>
+    <group>authentication,</group>
+  </rule>
+
+  <rule id="100201" level="8">
+    <if_sid>100200</if_sid>
+    <field name="event.outcome">failure</field>
+    <description>Enterprise SOC Lab: failed authentication observed</description>
+    <mitre>
+      <id>T1110</id>
+    </mitre>
+    <group>authentication_failures,</group>
+  </rule>
+</group>

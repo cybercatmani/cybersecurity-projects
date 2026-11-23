@@ -1,0 +1,15 @@
+# Wireshark display filters for authorized lab captures only
+# DNS queries
+dns
+# TCP connection setup
+tcp.flags.syn == 1 && tcp.flags.ack == 0
+# TLS handshakes
+tls.handshake
+# HTTP requests (only if traffic is not encrypted)
+http.request
+# Traffic involving a lab endpoint
+ip.addr == 10.10.10.21
+# Traffic to a lab server
+ip.dst == 10.10.10.5
+# Failed TCP connection indicators can require contextual review
+tcp.analysis.retransmission

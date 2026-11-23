@@ -1,0 +1,15 @@
+{
+  "description": "Training field mapping for the synthetic JSONL dataset; adapt to your real source schema.",
+  "fields": {
+    "timestamp": "UTC event time in ISO 8601 format",
+    "host": "Endpoint hostname",
+    "source": "windows|linux|network",
+    "event_type": "Normalized event category",
+    "user": "Synthetic or sanitized account name",
+    "src_ip": "Source IP when applicable",
+    "dst_ip": "Destination IP when applicable",
+    "outcome": "success|failure|observed",
+    "details": "Short event description",
+    "mitre": "ATT&CK technique identifier when relevant"
+  }
+}

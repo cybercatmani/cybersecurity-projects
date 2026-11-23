@@ -1,0 +1,22 @@
+title: Script Interpreter Started - Lab
+id: 7b71f6b3-5f43-4e1f-9c8b-2b3c4d5e6f70
+status: experimental
+description: Starter hunting idea for reviewing script interpreter process starts.
+author: SOC Sentinel Learning Lab
+date: 2026/11/23
+logsource:
+  category: process_creation
+  product: windows
+detection:
+  selection:
+    Image|endswith:
+      - '\powershell.exe'
+      - '\pwsh.exe'
+      - '\wscript.exe'
+  condition: selection
+falsepositives:
+  - Normal administration and automation
+level: low
+tags:
+  - attack.execution
+  - attack.t1059
