@@ -1,0 +1,5 @@
+{"timestamp": "2026-11-21T08:00:00Z", "host": "WIN-HUNT-01", "event_type": "authentication", "username": "training.user", "src_ip": "192.0.2.44", "outcome": "failure", "details": "Synthetic failed logon", "event_id": 4625}
+{"timestamp": "2026-11-21T08:00:19Z", "host": "WIN-HUNT-01", "event_type": "authentication", "username": "training.user", "src_ip": "192.0.2.44", "outcome": "failure", "details": "Synthetic failed logon", "event_id": 4625}
+{"timestamp": "2026-11-21T08:00:41Z", "host": "WIN-HUNT-01", "event_type": "authentication", "username": "training.user", "src_ip": "192.0.2.44", "outcome": "failure", "details": "Synthetic failed logon", "event_id": 4625}
+{"timestamp": "2026-11-21T08:01:10Z", "host": "WIN-HUNT-01", "event_type": "process_creation", "username": "training.user", "image": "powershell.exe", "details": "Synthetic process-start event"}
+{"timestamp": "2026-11-21T08:02:00Z", "host": "LINUX-HUNT-01", "event_type": "network_connection", "destination": "training-example.invalid", "destination_ip": "203.0.113.25", "details": "Synthetic TEST-NET training connection"}

@@ -1,0 +1,1 @@
+Keep examples defensive and authorized. Use synthetic/sanitized telemetry. Document assumptions and false positives. Test Python changes with the sample dataset. Never commit secrets, private keys, personal data, or confidential logs.\n

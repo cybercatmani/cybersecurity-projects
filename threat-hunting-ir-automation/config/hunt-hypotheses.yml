@@ -1,0 +1,18 @@
+- id: HUNT-001
+  hypothesis: Repeated authentication failures may indicate password guessing or user error.
+  data_sources: [Windows Security, Linux authentication]
+  pivots: [source_ip, username, host, time_window, subsequent_success]
+  false_positives: [mistyped_passwords, stale_credentials, approved_testing]
+  mitre_attack: T1110
+- id: HUNT-002
+  hypothesis: An unusual script interpreter launch may warrant process-tree review.
+  data_sources: [Sysmon process creation]
+  pivots: [parent_process, command_line, user, signer, file_path]
+  false_positives: [IT_administration, software_deployment]
+  mitre_attack: T1059
+- id: HUNT-003
+  hypothesis: A connection to a training IOC should be validated against asset and network context.
+  data_sources: [DNS, proxy, firewall]
+  pivots: [domain, destination_ip, timestamp, process, asset_owner]
+  false_positives: [stale_indicator, test_fixture, shared_hosting]
+  mitre_attack: T1071

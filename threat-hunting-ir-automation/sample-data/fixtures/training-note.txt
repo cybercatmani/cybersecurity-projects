@@ -1,0 +1,3 @@
+Harmless SOC lab fixture.
+SOC_LAB_TRAINING_MARKER_2026
+No malware or executable payload.

@@ -1,0 +1,18 @@
+default_mode: manual
+automatic_containment: disabled
+require_analyst_approval: true
+required_checks:
+  - validate_alert_and_raw_event
+  - confirm_asset_owner_and_business_impact
+  - review_false_positives
+  - preserve_evidence
+  - document_approver_and_timestamp
+permitted_lab_actions:
+  - create_case_note
+  - generate_triage_report
+  - recommend_investigation_pivot
+prohibited_without_separate_authorization:
+  - isolate_endpoint
+  - disable_user_account
+  - delete_or_quarantine_files
+  - block_ip_or_domain

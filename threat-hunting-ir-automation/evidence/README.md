@@ -1,0 +1,1 @@
+Store only sanitized screenshots and notes from your own lab. Never commit credentials, personal data, confidential logs, or private keys.\n
